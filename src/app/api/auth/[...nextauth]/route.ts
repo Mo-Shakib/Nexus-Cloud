@@ -4,10 +4,6 @@ import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 
-export const dynamic = 'force-dynamic';
-
-const prisma = new PrismaClient();
-
 const handler = NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
